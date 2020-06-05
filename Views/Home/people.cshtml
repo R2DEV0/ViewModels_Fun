@@ -1,0 +1,32 @@
+@using ViewModels.Models
+@model List<Person>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/style.css"/>
+    <title>Some People</title>
+</head>
+
+<body>
+    <div class='container'>
+        <h1>Here is a list of People!!!</h1>
+        <hr>
+        @foreach(var person in Model)
+        {
+            <h4> @person.FirstName @person.LastName </h4>
+        }
+    </div>
+
+    <div class="links">
+        <a href="/">Home</a> |
+        <a href="/nums">Numbers</a> |
+        <a href="/users">Users List</a> |
+        <a href="/user">One User</a>
+    </div>
+</body>
+
+</html>
